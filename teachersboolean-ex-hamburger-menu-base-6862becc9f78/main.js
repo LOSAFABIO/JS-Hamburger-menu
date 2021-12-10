@@ -1,18 +1,15 @@
 
-menu = document.querySelector(`.fa-bars`);
+const menuOpen = document.querySelector(".fa-bars");
 
-menu.addEventListener(`click`, function (){
+const menuClose = document.querySelector(".fa-times");
 
-    const element = document.querySelector(`.hamburger-menu`);
-    
-    element.className = element.classList + ` active`;
+const hamburgerMenu = document.querySelector(".hamburger-menu");
+
+menuOpen.addEventListener("click", function(){
+
+    hamburgerMenu.classList.add("active");
 }); 
 
-elementMenu = document.querySelector(`.fa-times`);
+menuClose.addEventListener("click", function(){ 
 
-elementMenu.addEventListener(`click`, function (){
-
-    const element = document.querySelector(`.hamburger-menu`);
-    
-    element.className = `hamburger-menu`
-}); 
+    hamburgerMenu.classList.remove("active");}); 
